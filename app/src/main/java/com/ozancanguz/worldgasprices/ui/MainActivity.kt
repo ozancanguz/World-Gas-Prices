@@ -1,7 +1,8 @@
-package com.ozancanguz.worldgasprices
+package com.ozancanguz.worldgasprices.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.ozancanguz.worldgasprices.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

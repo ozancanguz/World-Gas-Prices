@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/usaListFragment">
 
+    <fragment
+        android:id="@+id/usaListFragment"
+        android:name="com.ozancanguz.worldgasprices.ui.usa.list.UsaListFragment"
+        android:label="Usa Price List"
+        tools:layout="@layout/fragment_usa_list" />
+    <fragment
+        android:id="@+id/usaDetailsFragment"
+        android:name="com.ozancanguz.worldgasprices.ui.usa.detail.UsaDetailsFragment"
+        android:label="Usa Price Details"
+        tools:layout="@layout/fragment_usa_details" />
 </navigation>
