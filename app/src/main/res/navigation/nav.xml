@@ -36,4 +36,9 @@
         android:name="com.ozancanguz.worldgasprices.ui.eu.details.EuDetailsFragment"
         android:label="fragment_eu_details"
         tools:layout="@layout/fragment_eu_details" />
+    <fragment
+        android:id="@+id/trHomeFragment"
+        android:name="com.ozancanguz.worldgasprices.ui.tr.home.TrHomeFragment"
+        android:label="Turkey"
+        tools:layout="@layout/fragment_tr_home" />
 </navigation>

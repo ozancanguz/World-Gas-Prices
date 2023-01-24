@@ -9,5 +9,10 @@
         android:title=" EU"
         android:icon="@drawable/eu1"></item>
 
+    <item android:id="@+id/trHomeFragment"
+        android:title=" Turkey"
+        android:icon="@drawable/trhome2"></item>
+
+
 
 </menu>
