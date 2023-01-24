@@ -19,6 +19,7 @@ class UsaListAdapter:RecyclerView.Adapter<UsaListAdapter.UsaListViewHolder>() {
 
     fun setData(newData: Usa){
         this.usadatalist=newData.result
+        notifyDataSetChanged()
 
     }
 
