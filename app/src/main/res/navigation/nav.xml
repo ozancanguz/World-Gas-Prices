@@ -26,4 +26,14 @@
             android:id="@+id/action_usaDetailsFragment_to_usaListFragment"
             app:destination="@id/usaListFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/euListFragment"
+        android:name="com.ozancanguz.worldgasprices.ui.eu.list.EuListFragment"
+        android:label="fragment_eu_list"
+        tools:layout="@layout/fragment_eu_list" />
+    <fragment
+        android:id="@+id/euDetailsFragment"
+        android:name="com.ozancanguz.worldgasprices.ui.eu.details.EuDetailsFragment"
+        android:label="fragment_eu_details"
+        tools:layout="@layout/fragment_eu_details" />
 </navigation>

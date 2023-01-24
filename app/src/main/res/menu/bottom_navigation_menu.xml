@@ -5,5 +5,9 @@
         android:title=" USA"
         android:icon="@drawable/usapng2"></item>
 
+    <item android:id="@+id/euListFragment"
+        android:title=" EU"
+        android:icon="@drawable/eu1"></item>
+
 
 </menu>
