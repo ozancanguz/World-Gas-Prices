@@ -7,8 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import com.ozancanguz.worldgasprices.R
 import com.ozancanguz.worldgasprices.databinding.FragmentUsaDetailsBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class UsaDetailsFragment : Fragment() {
 
     private var _binding: FragmentUsaDetailsBinding? = null

@@ -8,7 +8,9 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.ozancanguz.worldgasprices.R
 import com.ozancanguz.worldgasprices.databinding.FragmentUsaListBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class UsaListFragment : Fragment() {
     private var _binding: FragmentUsaListBinding? = null
 
