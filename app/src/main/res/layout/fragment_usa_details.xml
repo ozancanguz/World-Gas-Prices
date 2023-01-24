@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:textColor="@color/white"
             android:gravity="center"
             android:text="Name" />
@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:textColor="@color/white"
             android:gravity="center"
             android:text="Currency" />
@@ -42,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:textColor="@color/white"
             android:gravity="center"
             android:text="Diesel Price" />
@@ -52,7 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:textColor="@color/white"
             android:gravity="center"
             android:text="Gasoline Price" />
@@ -62,7 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:textColor="@color/white"
             android:gravity="center"
             android:text="Mid Grade" />
@@ -72,7 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:textColor="@color/white"
             android:gravity="center"
             android:text="Premium Price" />

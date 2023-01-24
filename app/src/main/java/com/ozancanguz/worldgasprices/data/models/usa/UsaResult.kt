@@ -1,8 +1,11 @@
 package com.ozancanguz.worldgasprices.data.models.usa
 
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class UsaResult(
     @SerializedName("currency")
     val currency: String,
@@ -16,4 +19,4 @@ data class UsaResult(
     val name: String,
     @SerializedName("premium")
     val premium: String
-)
+):Parcelable

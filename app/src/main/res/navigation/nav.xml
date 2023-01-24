@@ -9,10 +9,21 @@
         android:id="@+id/usaListFragment"
         android:name="com.ozancanguz.worldgasprices.ui.usa.list.UsaListFragment"
         android:label="Usa Price List"
-        tools:layout="@layout/fragment_usa_list" />
+        tools:layout="@layout/fragment_usa_list" >
+        <action
+            android:id="@+id/action_usaListFragment_to_usaDetailsFragment"
+            app:destination="@id/usaDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/usaDetailsFragment"
         android:name="com.ozancanguz.worldgasprices.ui.usa.detail.UsaDetailsFragment"
         android:label="Usa Price Details"
-        tools:layout="@layout/fragment_usa_details" />
+        tools:layout="@layout/fragment_usa_details" >
+        <argument
+            android:name="currenusadata"
+            app:argType="com.ozancanguz.worldgasprices.data.models.usa.UsaResult" />
+        <action
+            android:id="@+id/action_usaDetailsFragment_to_usaListFragment"
+            app:destination="@id/usaListFragment" />
+    </fragment>
 </navigation>
