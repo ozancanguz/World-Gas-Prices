@@ -29,7 +29,7 @@
     <fragment
         android:id="@+id/euListFragment"
         android:name="com.ozancanguz.worldgasprices.ui.eu.list.EuListFragment"
-        android:label="fragment_eu_list"
+        android:label="Eu Price List"
         tools:layout="@layout/fragment_eu_list" />
     <fragment
         android:id="@+id/euDetailsFragment"

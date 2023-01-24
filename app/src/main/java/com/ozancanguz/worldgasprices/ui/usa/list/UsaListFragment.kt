@@ -46,9 +46,12 @@ class UsaListFragment : Fragment() {
     }
 
     private fun observeUsaData() {
+
+        binding.usaprogressBar.visibility=View.VISIBLE
        usaviewmodel.requestUsaData()
         usaviewmodel.usaDataList.observe(viewLifecycleOwner, Observer { usaList ->
             usaListAdapter.setData(usaList)
+            binding.usaprogressBar.visibility=View.INVISIBLE
         })
     }
 

@@ -12,6 +12,7 @@ import com.ozancanguz.worldgasprices.data.models.usa.UsaResult
 import com.ozancanguz.worldgasprices.ui.usa.list.UsaListFragment
 import com.ozancanguz.worldgasprices.ui.usa.list.UsaListFragmentDirections
 import com.ozancanguz.worldgasprices.ui.usa.list.UsaListFragmentDirections.ActionUsaListFragmentToUsaDetailsFragment
+import kotlinx.android.synthetic.main.fragment_usa_list.view.*
 import kotlinx.android.synthetic.main.usa_row_layout.view.*
 
 class UsaListAdapter:RecyclerView.Adapter<UsaListAdapter.UsaListViewHolder>() {
@@ -42,6 +43,9 @@ class UsaListAdapter:RecyclerView.Adapter<UsaListAdapter.UsaListViewHolder>() {
             val action=UsaListFragmentDirections.actionUsaListFragmentToUsaDetailsFragment(currentUsaData)
             holder.itemView.findNavController().navigate(action)
         }
+
+
+
 
     }
 
