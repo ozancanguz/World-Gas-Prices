@@ -40,5 +40,13 @@
         android:id="@+id/trHomeFragment"
         android:name="com.ozancanguz.worldgasprices.ui.tr.home.TrHomeFragment"
         android:label="Turkey"
-        tools:layout="@layout/fragment_tr_home" />
+        tools:layout="@layout/fragment_tr_home" >
+        <action
+            android:id="@+id/action_trHomeFragment_to_trGasolineFragment"
+            app:destination="@id/trGasolineFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trGasolineFragment"
+        android:name="com.ozancanguz.worldgasprices.ui.tr.gasoline.TrGasolineFragment"
+        android:label="TrGasolineFragment" />
 </navigation>

@@ -1,22 +1,20 @@
-package com.ozancanguz.worldgasprices.ui.tr.home
+package com.ozancanguz.worldgasprices.ui.tr.gasoline
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
 import com.ozancanguz.worldgasprices.R
-import com.ozancanguz.worldgasprices.databinding.FragmentTrHomeBinding
+import com.ozancanguz.worldgasprices.databinding.FragmentTrGasolineBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class TrHomeFragment : Fragment() {
+class TrGasolineFragment : Fragment() {
 
-       private var _binding: FragmentTrHomeBinding? = null
+    private var _binding: FragmentTrGasolineBinding? = null
 
     private val binding get() = _binding!!
-
 
 
 
@@ -24,17 +22,13 @@ class TrHomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-         _binding = FragmentTrHomeBinding.inflate(inflater, container, false)
+         _binding = FragmentTrGasolineBinding.inflate(inflater, container, false)
         val view = binding.root
 
-       binding.trhomegasolinepart.setOnClickListener {
-           findNavController().navigate(R.id.action_trHomeFragment_to_trGasolineFragment)
-       }
+
 
 
         return view
     }
-
 
 }
