@@ -7,8 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.ozancanguz.worldgasprices.R
+import com.ozancanguz.worldgasprices.data.adapters.TrLpgAdapter
 import com.ozancanguz.worldgasprices.databinding.FragmentTrLpgBinding
+import com.ozancanguz.worldgasprices.viewmodel.TrViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -17,6 +22,9 @@ class TrLpgFragment : Fragment(),AdapterView.OnItemSelectedListener {
      private var _binding: FragmentTrLpgBinding? = null
 
     private val binding get() = _binding!!
+
+    private val trViewModel:TrViewModel by viewModels()
+    private val lpgAdapter=TrLpgAdapter()
 
 
 
@@ -41,10 +49,32 @@ class TrLpgFragment : Fragment(),AdapterView.OnItemSelectedListener {
         binding.trlpgspinner.onItemSelectedListener=this
 
 
+        // setting up rv
+        setupRv()
 
+        // observe lpg data and update ui
+        observeLiveData()
 
 
         return view
+    }
+
+    private fun setupRv() {
+        binding.trlpgrv.layoutManager=LinearLayoutManager(requireContext())
+        binding.trlpgrv.adapter=lpgAdapter
+    }
+
+    private fun observeLiveData() {
+      binding.trlpgsearchbtn.setOnClickListener {
+          binding.trlpgpb.visibility=View.VISIBLE
+          val city=binding.trlpgbrand.text.toString()
+          trViewModel.requestlpgData(city)
+          trViewModel.trlpgData.observe(viewLifecycleOwner, Observer {
+              lpgAdapter.setData(it)
+              binding.trlpgpb.visibility=View.INVISIBLE
+
+          })
+      }
     }
 
     override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {

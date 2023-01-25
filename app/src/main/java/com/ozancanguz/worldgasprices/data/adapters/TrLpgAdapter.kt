@@ -32,8 +32,8 @@ class TrLpgAdapter:RecyclerView.Adapter<TrLpgAdapter.TrLpgViewHolder>(){
     override fun onBindViewHolder(holder: TrLpgViewHolder, position: Int) {
        val currentLpg=trlpglist[position]
         holder.itemView.trlpgRVimageview.setImageResource(R.drawable.lpghome)
-        holder.itemView.trlpgRVbrandtv.text=currentLpg.marka
-        holder.itemView.trlpgRVpricetv.text=currentLpg.lpg.toString()
+        holder.itemView.trlpgRVbrandtv.text="Brand: " +currentLpg.marka
+        holder.itemView.trlpgRVpricetv.text="Price: " +currentLpg.lpg.toString() + "TL"
 
 
     }
