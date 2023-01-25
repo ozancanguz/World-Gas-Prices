@@ -1,6 +1,7 @@
 package com.ozancanguz.worldgasprices.data.api
 
 import com.ozancanguz.worldgasprices.data.models.eu.EuModel
+import com.ozancanguz.worldgasprices.data.models.tr.diesel.TrDieselModel
 import com.ozancanguz.worldgasprices.data.models.tr.gasoline.TrGasolineModel
 import com.ozancanguz.worldgasprices.data.models.usa.Usa
 import retrofit2.Response
@@ -36,6 +37,14 @@ interface GasPriceApi {
     )
     @GET("turkeyGasoline")
     suspend fun getTrGasolineData(@Query("city")city:String):Response<TrGasolineModel>
+
+
+    // get tr diesel prices
+    @Headers(
+        "authorization: apikey 6XBClsiyFUwn61jEKgPcWy:7hBFCMRuNZto9F4nzaj3Mz",
+        "content-type: application/json"
+    )
+    suspend fun getTrDieselData(@Query("city")city: String):Response<TrDieselModel>
 
 
 
