@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.ozancanguz.worldgasprices.data.models.tr.diesel.TrDieselModel
 import com.ozancanguz.worldgasprices.data.models.tr.gasoline.TrGasolineModel
 import com.ozancanguz.worldgasprices.data.repository.Repository
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -15,7 +16,7 @@ import javax.inject.Inject
 class TrViewModel@Inject constructor(private val repository: Repository, application: Application):AndroidViewModel(application) {
 
     var trgasolineData=MutableLiveData<TrGasolineModel>()
-
+    var trdieselData=MutableLiveData<TrDieselModel>()
 
 
 
@@ -29,8 +30,17 @@ class TrViewModel@Inject constructor(private val repository: Repository, applica
                 Log.d("trviewmodel","no data for gasoline")
             }
         }
+    }
 
-
+    fun requestTrDieselData(city: String){
+        viewModelScope.launch {
+            val response=repository.remote.getTrDieselData(city)
+            if (response.isSuccessful){
+                trdieselData.postValue(response.body())
+            }else{
+                Log.d("trviewmodel","no data for diesel")
+            }
+        }
     }
 
 
