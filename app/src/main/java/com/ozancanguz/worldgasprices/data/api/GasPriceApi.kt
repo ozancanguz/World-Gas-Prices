@@ -30,6 +30,10 @@ interface GasPriceApi {
 
 
     // get tr gasoline data
+    @Headers(
+        "authorization: apikey 6XBClsiyFUwn61jEKgPcWy:7hBFCMRuNZto9F4nzaj3Mz",
+        "content-type: application/json"
+    )
     @GET("turkeyGasoline")
     suspend fun getTrGasolineData(@Query("city")city:String):Response<TrGasolineModel>
 

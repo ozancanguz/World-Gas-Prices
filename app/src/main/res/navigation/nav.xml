@@ -48,5 +48,5 @@
     <fragment
         android:id="@+id/trGasolineFragment"
         android:name="com.ozancanguz.worldgasprices.ui.tr.gasoline.TrGasolineFragment"
-        android:label="TrGasolineFragment" />
+        android:label="Tr Gasoline Prices" />
 </navigation>

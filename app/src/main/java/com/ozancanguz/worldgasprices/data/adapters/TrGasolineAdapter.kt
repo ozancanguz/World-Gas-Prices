@@ -30,9 +30,9 @@ class TrGasolineAdapter:RecyclerView.Adapter<TrGasolineAdapter.TrViewHolder>() {
     override fun onBindViewHolder(holder: TrViewHolder, position: Int) {
         val currentGasoline=trgasolineList[position]
         holder.itemView.imageView.setImageResource(R.drawable.trgasoline)
-        holder.itemView.Rvbrandtextview.text=currentGasoline.marka
-        holder.itemView.Rvkatkilitv.text=currentGasoline.katkili.toString()
-        holder.itemView.RvgasolinePricetv.text=currentGasoline.benzin.toString()
+        holder.itemView.Rvbrandtextview.text="Brand: " +currentGasoline.marka
+        holder.itemView.Rvkatkilitv.text="Added Price: " +currentGasoline.katkili.toString() +"TL"
+        holder.itemView.RvgasolinePricetv.text="Price: " +currentGasoline.benzin.toString() + "TL"
 
     }
 
