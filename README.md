@@ -15,6 +15,8 @@ There are different screens for usa,europe,turkey. Data changes everyday by api.
 - RESTApi
 - LottieAnimationView
 
+**Arhictecture:**
+
 - MVVM
 
 ![image](https://user-images.githubusercontent.com/64928807/214137273-3ed73d25-0cbc-439a-aa28-a9655b04be1c.png)
