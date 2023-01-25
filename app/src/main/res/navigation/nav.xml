@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav"
-    app:startDestination="@id/usaListFragment">
+    app:startDestination="@id/homeScreen">
 
     <fragment
         android:id="@+id/usaListFragment"
@@ -74,4 +74,18 @@
         android:id="@+id/trLpgFragment"
         android:name="com.ozancanguz.worldgasprices.ui.tr.lpg.TrLpgFragment"
         android:label="Tr Lpg Prices" />
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="com.ozancanguz.worldgasprices.ui.home.HomeScreen"
+        android:label="HomeScreen" >
+        <action
+            android:id="@+id/action_homeScreen_to_usaListFragment"
+            app:destination="@id/usaListFragment" />
+        <action
+            android:id="@+id/action_homeScreen_to_euListFragment"
+            app:destination="@id/euListFragment" />
+        <action
+            android:id="@+id/action_homeScreen_to_trHomeFragment"
+            app:destination="@id/trHomeFragment" />
+    </fragment>
 </navigation>

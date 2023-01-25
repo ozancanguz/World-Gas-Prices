@@ -5,10 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EF5B0C"
-    tools:context=".ui.tr.home.TrHomeFragment">
+   >
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/trhomegasolinepart"
+        android:id="@+id/homescreenUsaPart"
         android:layout_width="0dp"
         android:layout_height="177dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,11 +21,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginStart="12dp"
+            android:layout_marginStart="36dp"
             android:layout_marginTop="32dp"
-            android:layout_marginEnd="4dp"
-            android:src="@drawable/trgasoline"
-            app:layout_constraintEnd_toStartOf="@+id/trhomegasolinenav"
+            android:src="@drawable/usapng"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,18 +31,18 @@
             android:id="@+id/trhomegasolinenav"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="92dp"
-            android:layout_marginEnd="16dp"
-            android:text="TURKEY GASOLINE PRICES"
+            android:layout_marginTop="76dp"
+            android:layout_marginEnd="84dp"
+            android:text="USA GAS PRICES"
+            android:textColor="#2E383F"
             android:textSize="18sp"
-            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/trhomedieselpart"
+        android:id="@+id/homescreenTurkeyPart"
         android:layout_width="0dp"
         android:layout_height="177dp"
         android:layout_marginTop="396dp"
@@ -59,7 +58,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginStart="32dp"
             android:layout_marginTop="32dp"
-            android:src="@drawable/dieselhome"
+            android:src="@drawable/turkey"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -68,17 +67,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="76dp"
-            android:layout_marginEnd="48dp"
-            android:text="TURKEY DIESEL PRICES"
+            android:layout_marginEnd="68dp"
+            android:text="TURKEY GAS PRICES"
+            android:textColor="#2E383F"
             android:textSize="18sp"
-            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/trhomelpgpart"
+        android:id="@+id/homescreenEuPart"
         android:layout_width="0dp"
         android:layout_height="177dp"
         android:layout_marginTop="200dp"
@@ -92,10 +91,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="76dp"
-            android:layout_marginEnd="64dp"
-            android:text="TURKEY LPG PRICES"
+            android:layout_marginEnd="60dp"
+            android:text="EUROPE GAS PRICES"
+            android:textColor="#2E383F"
             android:textSize="18sp"
-            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -105,13 +104,21 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginTop="32dp"
-            android:src="@drawable/lpghome"
+            android:src="@drawable/europe"
             app:layout_constraintEnd_toStartOf="@+id/trhomegasolinenav2"
             app:layout_constraintHorizontal_bias="0.653"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <ProgressBar
+            android:id="@+id/homescreenprogress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ProgressBar>
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

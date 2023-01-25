@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#512E67">
+    android:background="#EF5B0C">
 
     <ProgressBar
         android:id="@+id/dieselpb"
@@ -51,9 +51,10 @@
         android:layout_width="241dp"
         android:layout_height="53dp"
         android:layout_marginStart="72dp"
-        android:background="#FA9191"
+        android:background="#6F1AB6"
         android:gravity="center"
         android:text="Aytemiz"
+        android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/deiselspinner"
         app:layout_constraintStart_toStartOf="parent"
