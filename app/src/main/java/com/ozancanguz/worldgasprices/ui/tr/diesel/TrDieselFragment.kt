@@ -5,13 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import com.ozancanguz.worldgasprices.R
 import com.ozancanguz.worldgasprices.databinding.FragmentTrDieselBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class TrDieselFragment : Fragment() {
+class TrDieselFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
     private var _binding: FragmentTrDieselBinding? = null
 
@@ -34,10 +35,20 @@ class TrDieselFragment : Fragment() {
 
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         binding.deiselspinner.adapter=arrayAdapter
+        binding.deiselspinner.onItemSelectedListener=this
 
 
 
         return view
+    }
+
+    override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+
+        binding.trdieseltv.text=p0!!.getItemAtPosition(p2).toString()
+    }
+
+    override fun onNothingSelected(p0: AdapterView<*>?) {
+
     }
 
 
