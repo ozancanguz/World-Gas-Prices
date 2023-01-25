@@ -88,4 +88,8 @@
             android:id="@+id/action_homeScreen_to_trHomeFragment"
             app:destination="@id/trHomeFragment" />
     </fragment>
+    <activity
+        android:id="@+id/splashActivity"
+        android:name="com.ozancanguz.worldgasprices.ui.splash.SplashActivity"
+        android:label="SplashActivity" />
 </navigation>
