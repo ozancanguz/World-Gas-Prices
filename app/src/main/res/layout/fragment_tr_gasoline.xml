@@ -34,21 +34,21 @@
         android:id="@+id/searchbtn"
         android:layout_width="30dp"
         android:layout_height="28dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="62dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="20dp"
         android:src="@drawable/ic_search"
         app:layout_constraintBottom_toTopOf="@+id/searchnameRv"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintHorizontal_bias="0.178"
         app:layout_constraintStart_toEndOf="@+id/brandtv"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/brandtv"
-        android:layout_width="179dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="124dp"
+        android:layout_width="212dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="96dp"
         android:background="#F9A828"
         android:gravity="center"
         android:text="Aytemiz"
@@ -56,7 +56,7 @@
         app:layout_constraintBottom_toTopOf="@+id/spinner3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.622" />
+        app:layout_constraintVertical_bias="0.615" />
 
     <Spinner
         android:id="@+id/spinner3"
