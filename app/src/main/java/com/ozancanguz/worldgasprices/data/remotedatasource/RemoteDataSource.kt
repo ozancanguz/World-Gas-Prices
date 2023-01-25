@@ -2,6 +2,7 @@ package com.ozancanguz.worldgasprices.data.remotedatasource
 
 import com.ozancanguz.worldgasprices.data.api.GasPriceApi
 import com.ozancanguz.worldgasprices.data.models.eu.EuModel
+import com.ozancanguz.worldgasprices.data.models.tr.diesel.TrDieselModel
 import com.ozancanguz.worldgasprices.data.models.tr.gasoline.TrGasolineModel
 import com.ozancanguz.worldgasprices.data.models.usa.Usa
 import retrofit2.Response
@@ -21,6 +22,10 @@ class RemoteDataSource@Inject constructor(private val gasPriceApi: GasPriceApi){
 
     suspend fun getTrGasolineData(city:String):Response<TrGasolineModel>{
         return gasPriceApi.getTrGasolineData(city)
+    }
+
+    suspend fun getTrDieselData(city: String):Response<TrDieselModel>{
+        return gasPriceApi.getTrDieselData(city)
     }
 
 }
