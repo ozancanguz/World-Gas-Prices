@@ -44,6 +44,7 @@ interface GasPriceApi {
         "authorization: apikey 6XBClsiyFUwn61jEKgPcWy:7hBFCMRuNZto9F4nzaj3Mz",
         "content-type: application/json"
     )
+    @GET("turkeyDiesel")
     suspend fun getTrDieselData(@Query("city")city: String):Response<TrDieselModel>
 
 

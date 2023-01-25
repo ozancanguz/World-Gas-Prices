@@ -7,8 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.ozancanguz.worldgasprices.R
+import com.ozancanguz.worldgasprices.data.adapters.TrDieselAdapter
 import com.ozancanguz.worldgasprices.databinding.FragmentTrDieselBinding
+import com.ozancanguz.worldgasprices.viewmodel.TrViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -17,6 +22,10 @@ class TrDieselFragment : Fragment(), AdapterView.OnItemSelectedListener {
     private var _binding: FragmentTrDieselBinding? = null
 
     private val binding get() = _binding!!
+
+    private val trViewModel:TrViewModel by viewModels()
+
+    private val dieselAdapter=TrDieselAdapter()
 
 
 
@@ -37,9 +46,30 @@ class TrDieselFragment : Fragment(), AdapterView.OnItemSelectedListener {
         binding.deiselspinner.adapter=arrayAdapter
         binding.deiselspinner.onItemSelectedListener=this
 
+        // setting up rv
+        setupRv()
 
+        // observe diesel price data and update ui
+        observeDieselData()
 
         return view
+    }
+
+    private fun observeDieselData() {
+        binding.dieselsearch.setOnClickListener {
+            binding.dieselpb.visibility=View.VISIBLE
+            val city=binding.trdieseltv.text.toString()
+            trViewModel.requestTrDieselData(city)
+            trViewModel.trdieselData.observe(viewLifecycleOwner, Observer {
+                dieselAdapter.setData(it)
+                binding.dieselpb.visibility=View.INVISIBLE
+            })
+        }
+    }
+
+    private fun setupRv() {
+        binding.trdieselrecyclerview.layoutManager=LinearLayoutManager(requireContext())
+        binding.trdieselrecyclerview.adapter=dieselAdapter
     }
 
     override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {

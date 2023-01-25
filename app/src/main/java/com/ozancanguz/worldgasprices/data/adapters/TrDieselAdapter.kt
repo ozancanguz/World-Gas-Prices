@@ -33,7 +33,7 @@ class TrDieselAdapter:RecyclerView.Adapter<TrDieselAdapter.TrDieselViewHolder>()
         holder.itemView.trdieselrvimageview.setImageResource(R.drawable.dieselhome)
         holder.itemView.RvBrandDieselTv.text="Brand: " +currentDieselModel.marka
         holder.itemView.RvDieselPriceTv.text="Price: " +currentDieselModel.dizel.toString() + "TL"
-        holder.itemView.RvDieselPriceTv.text="Added Price: " +currentDieselModel.katkili.toString() + "TL"
+        holder.itemView.RvDieselAddedTv.text="Added Price: " +currentDieselModel.katkili.toString() + " TL"
 
 
     }
