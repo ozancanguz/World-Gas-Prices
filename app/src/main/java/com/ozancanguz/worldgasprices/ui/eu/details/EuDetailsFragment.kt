@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.navArgs
 import com.ozancanguz.worldgasprices.R
 import com.ozancanguz.worldgasprices.databinding.FragmentEuDetailsBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -15,6 +16,8 @@ class EuDetailsFragment : Fragment() {
     private var _binding: FragmentEuDetailsBinding? = null
 
     private val binding get() = _binding!!
+
+    private val args:EuDetailsFragmentArgs by navArgs()
 
 
 
@@ -28,7 +31,13 @@ class EuDetailsFragment : Fragment() {
         val view = binding.root
 
 
+        updateUi()
+
         return view
+    }
+
+    private fun updateUi() {
+
     }
 
 

@@ -30,12 +30,23 @@
         android:id="@+id/euListFragment"
         android:name="com.ozancanguz.worldgasprices.ui.eu.list.EuListFragment"
         android:label="Eu Price List"
-        tools:layout="@layout/fragment_eu_list" />
+        tools:layout="@layout/fragment_eu_list" >
+        <action
+            android:id="@+id/action_euListFragment_to_euDetailsFragment"
+            app:destination="@id/euDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/euDetailsFragment"
         android:name="com.ozancanguz.worldgasprices.ui.eu.details.EuDetailsFragment"
         android:label="fragment_eu_details"
-        tools:layout="@layout/fragment_eu_details" />
+        tools:layout="@layout/fragment_eu_details" >
+        <action
+            android:id="@+id/action_euDetailsFragment_to_euListFragment"
+            app:destination="@id/euListFragment" />
+        <argument
+            android:name="currentEu"
+            app:argType="com.ozancanguz.worldgasprices.data.models.eu.EuResult" />
+    </fragment>
     <fragment
         android:id="@+id/trHomeFragment"
         android:name="com.ozancanguz.worldgasprices.ui.tr.home.TrHomeFragment"
