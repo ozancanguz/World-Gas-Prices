@@ -1,10 +1,12 @@
 package com.ozancanguz.worldgasprices.data.api
 
 import com.ozancanguz.worldgasprices.data.models.eu.EuModel
+import com.ozancanguz.worldgasprices.data.models.tr.gasoline.TrGasolineModel
 import com.ozancanguz.worldgasprices.data.models.usa.Usa
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Headers
+import retrofit2.http.Query
 
 interface GasPriceApi {
 
@@ -26,6 +28,10 @@ interface GasPriceApi {
     @GET("europeanCountries")
     suspend fun getEuData():Response<EuModel>
 
+
+    // get tr gasoline data
+    @GET("turkeyGasoline")
+    suspend fun getTrGasolineData(@Query("city")city:String):Response<TrGasolineModel>
 
 
 
