@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import com.ozancanguz.worldgasprices.R
 import com.ozancanguz.worldgasprices.databinding.FragmentTrGasolineBinding
@@ -12,7 +13,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_tr_gasoline.*
 
 @AndroidEntryPoint
-class TrGasolineFragment : Fragment() {
+class TrGasolineFragment : Fragment() ,AdapterView.OnItemSelectedListener{
 
     private var _binding: FragmentTrGasolineBinding? = null
 
@@ -35,9 +36,23 @@ class TrGasolineFragment : Fragment() {
 
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         binding.spinner3.adapter=arrayAdapter
+        binding.spinner3.onItemSelectedListener=this
+
+
 
 
         return view
+    }
+
+    override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+
+        binding.brandtv.text=parent!!.getItemAtPosition(position).toString()
+
+
+    }
+
+    override fun onNothingSelected(p0: AdapterView<*>?) {
+
     }
 
 }
