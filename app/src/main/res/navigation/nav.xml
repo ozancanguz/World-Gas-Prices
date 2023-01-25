@@ -38,7 +38,7 @@
     <fragment
         android:id="@+id/euDetailsFragment"
         android:name="com.ozancanguz.worldgasprices.ui.eu.details.EuDetailsFragment"
-        android:label="fragment_eu_details"
+        android:label="Eu Details"
         tools:layout="@layout/fragment_eu_details" >
         <action
             android:id="@+id/action_euDetailsFragment_to_euListFragment"
@@ -69,9 +69,9 @@
     <fragment
         android:id="@+id/trDieselFragment"
         android:name="com.ozancanguz.worldgasprices.ui.tr.diesel.TrDieselFragment"
-        android:label="TrDieselFragment" />
+        android:label="Tr Diesel Prices" />
     <fragment
         android:id="@+id/trLpgFragment"
         android:name="com.ozancanguz.worldgasprices.ui.tr.lpg.TrLpgFragment"
-        android:label="TrLpgFragment" />
+        android:label="Tr Lpg Prices" />
 </navigation>

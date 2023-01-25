@@ -38,6 +38,13 @@ class EuDetailsFragment : Fragment() {
 
     private fun updateUi() {
 
+        val args=args.currentEu
+        binding.imageView.setImageResource(R.drawable.eu2)
+        binding.eudetailscountrytv.text="Country " +args.country
+        binding.eudetailscurrencytv.text="Currency: " +args.currency
+        binding.eudetailsgasolinetv.text="Gasoline Price: " +args.gasoline +"Euro"
+        binding.eudetailsdieselTv.text="Diesel Price: " +args.diesel+ "Euro"
+        binding.eudetailslpgtv.text="Lpg Price: " +args.lpg + "Euro"
     }
 
 
