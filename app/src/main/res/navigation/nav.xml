@@ -47,6 +47,9 @@
         <action
             android:id="@+id/action_trHomeFragment_to_trDieselFragment"
             app:destination="@id/trDieselFragment" />
+        <action
+            android:id="@+id/action_trHomeFragment_to_trLpgFragment"
+            app:destination="@id/trLpgFragment" />
     </fragment>
     <fragment
         android:id="@+id/trGasolineFragment"
@@ -56,4 +59,8 @@
         android:id="@+id/trDieselFragment"
         android:name="com.ozancanguz.worldgasprices.ui.tr.diesel.TrDieselFragment"
         android:label="TrDieselFragment" />
+    <fragment
+        android:id="@+id/trLpgFragment"
+        android:name="com.ozancanguz.worldgasprices.ui.tr.lpg.TrLpgFragment"
+        android:label="TrLpgFragment" />
 </navigation>

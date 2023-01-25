@@ -36,6 +36,10 @@ class TrHomeFragment : Fragment() {
             findNavController().navigate(R.id.action_trHomeFragment_to_trDieselFragment)
         }
 
+        binding.trhomelpgpart.setOnClickListener {
+            findNavController().navigate(R.id.action_trHomeFragment_to_trLpgFragment)
+        }
+
         return view
     }
 
