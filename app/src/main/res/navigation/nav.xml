@@ -44,9 +44,16 @@
         <action
             android:id="@+id/action_trHomeFragment_to_trGasolineFragment"
             app:destination="@id/trGasolineFragment" />
+        <action
+            android:id="@+id/action_trHomeFragment_to_trDieselFragment"
+            app:destination="@id/trDieselFragment" />
     </fragment>
     <fragment
         android:id="@+id/trGasolineFragment"
         android:name="com.ozancanguz.worldgasprices.ui.tr.gasoline.TrGasolineFragment"
         android:label="Tr Gasoline Prices" />
+    <fragment
+        android:id="@+id/trDieselFragment"
+        android:name="com.ozancanguz.worldgasprices.ui.tr.diesel.TrDieselFragment"
+        android:label="TrDieselFragment" />
 </navigation>

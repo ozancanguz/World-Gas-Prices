@@ -5,10 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import com.ozancanguz.worldgasprices.R
 import com.ozancanguz.worldgasprices.databinding.FragmentTrDieselBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class TrDieselFragment : Fragment() {
 
     private var _binding: FragmentTrDieselBinding? = null
@@ -23,6 +25,15 @@ class TrDieselFragment : Fragment() {
     ): View? {
          _binding = FragmentTrDieselBinding.inflate(inflater, container, false)
         val view = binding.root
+
+        var arrayAdapter= ArrayAdapter.createFromResource(
+
+            requireContext(),R.array.brands,
+            android.R.layout.simple_spinner_item
+        )
+
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.deiselspinner.adapter=arrayAdapter
 
 
 
