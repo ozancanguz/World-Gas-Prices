@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF9F29"
+    android:background="#003865"
     tools:context=".ui.eu.list.EuListFragment">
 
     <!-- TODO: Update blank fragment layout -->

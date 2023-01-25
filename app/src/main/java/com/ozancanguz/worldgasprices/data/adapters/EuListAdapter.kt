@@ -28,11 +28,7 @@ class EuListAdapter:RecyclerView.Adapter<EuListAdapter.EuListViewHolder>() {
 
     override fun onBindViewHolder(holder: EuListViewHolder, position: Int) {
         val currentEuData=eulistData[position]
-        holder.itemView.countrytv.text="Country: " +currentEuData.country
-        holder.itemView.currencyTv.text="Currency: " +currentEuData.currency
-        holder.itemView.dieselTv.text="Diesel: " +currentEuData.diesel +"$"
-        holder.itemView.gasolinetv.text="Gasoline: " +currentEuData.gasoline + "$"
-        holder.itemView.lpgtv.text="LPG: " +currentEuData.lpg + "$"
+        holder.itemView.countrytv.text=currentEuData.country
         holder.itemView.euimageview.setImageResource(R.drawable.eu2)
     }
 
